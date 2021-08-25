@@ -1,0 +1,605 @@
+@charset "utf-8";
+/* CSS Document */
+/* 
+TAG: H1, H2, UL, LI, NAV
+CLASS: .site, .topo
+ID: #rodape
+
+Seletor{
+	propriedade: valor;
+}
+h1{
+	color: #856234;
+	font-size: 16px;
+}
+
+h1, h2, h3{
+	color: #856234;
+	font-size: 16px;
+}
+*/
+
+body{
+	font-family: "Agency FB";
+	font-size: 16px;
+	width: 100%;
+	margin: 0 auto;
+}
+.site{
+	width: 100%; /* se ajustar ate a maxima larrgura em * */
+	max-width: 1200px; /* Max Largura da tela*/
+	margin: 0 auto;
+}
+
+.topo{
+	background: #f38c23; 
+}
+
+.topo article{
+	display: flex;
+	justify-content: space-between;
+}
+
+.topo article h1{
+	background: url(../img/saude-bem-estar-logo-preto.svg) no-repeat;
+	/*background-repeat: no-repeat;*/
+	width: 30%;
+	text-indent: -9999px;
+	display: block;
+	margin: 10px 0;
+}
+/* INICIO MENU */
+
+.menu ul{
+	display: flex;
+	justify-content: space-around;
+}
+
+.menu li{
+	font-size: 1em;
+	padding: 1.5em;
+}
+
+.menu ul li:hover{ /* hover aciona quando passa o mouse */
+	background: rgba(51,3,4,1.00);
+}
+
+
+.menu ul li a{
+	text-decoration: none;
+	color: #FFFFFF;
+	padding: 1em;
+}
+
+.menu ul li a:hover{
+	color: #f38c23;
+}
+/* FIM MENU */
+
+/*inicio submenu */
+.menu ul ul{
+	display: none; /* esconder*/
+	position: absolute; /* ficar quebrada abaixo do outro*/
+	z-index:9999; /* sobrepor */
+}
+
+.menu ul li:hover > ul{
+	display:block;
+	margin-top:25px;
+}
+
+.submenu{
+	background: rgba(255,150,0,0.60);
+	margin: 2.2% 0!important; /* important sobresair após qualquer aplicação de estilo */
+}
+
+.submenu li{
+	padding: 0.5em 1em!important;
+	border-bottom: thin solid #fff;
+
+}
+
+/* fim sub menu*/
+
+/* menu mobile*/
+
+.menu-mobile{
+	padding: 20px;
+	color: #FFFFFF;
+	font-weight: bold;
+	background: #f38c23;
+	text-align: center;
+	font-size: 2em;
+	display: none;
+}
+
+input[id=menu-mobile]{
+	display:none;
+}
+
+input[id=menu-mobile]:checked ~ .menu{
+	display:block;
+	width: 100%;
+}
+
+/* menu fixo */
+.menu-fixo{
+	z-index: 9999;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	transition: all 1s ease-out;
+	background:rgba(242,123,61,0.64);
+}  /* fim menu fixo */
+
+.banner img{
+	width: 100%;
+}
+
+
+/* INICIO chamadaUm */
+
+.chamadaUm{
+	text-align: center;
+}
+
+.chamadaUm h2{
+	font-size: 3em;
+	color: #FF9600;
+	border-bottom: 5px solid #794611;
+	display: inline-block;
+	text-transform: uppercase;
+	margin-top: 1em;
+}
+
+.chamadaUm hr{
+	background: #FF9600;
+	height: 3px;
+	border: none;
+	position: relative;
+	top:-12px;
+	z-index: -1;
+}
+
+.chamadaUm section{
+	display: flex;
+	justify-content: space-between;
+}
+.chamadaUm article img:hover{
+	transform: scale(1.5);
+	transition: all 0.5s ease-out;
+}
+.chamadaUm article h3{
+	font-size: 1.8em;
+	color: #FF9600;
+	text-transform: uppercase;
+	margin: 10px 0;
+}
+
+.chamadaUm article p{
+	font-size: 1.2em;
+	color: #353434;
+	width: 80%;
+	margin: 10px auto;
+}
+
+/* FIM chamadaUm */
+
+/* INICIO chamadaDois */ 
+
+.chamadaDois{
+	margin: 2% 0;
+}
+
+.titulo h2:first-child{
+	font-size: 3em;
+	color: #FF9600;
+}
+.tituloDesk{
+	font-size: 4em;
+	color: #353434;
+	position: relative;
+	top: -30px;
+	left: 20px;
+	z-index: -1;
+}
+
+.tituloMobile{
+	display:none;
+}
+
+.atividade{
+	display: flex;
+	justify-content: space-between;
+}
+
+.atividade article{
+	height: 30em;
+	width: 32%;
+	background: #2D2D2D;
+	text-align: center;
+}
+
+.atividade article:nth-of-type(1){
+	background: url(../img/atividade01.png);
+	background-size: cover;
+}
+.atividade article:nth-of-type(1):hover{
+	background: url(../img/atividade01-1.png);
+	background-size: cover;
+	transition: all 0.5s ease-out;
+}
+
+.atividade article:nth-of-type(2){
+	background: url(../img/atividade02.png);
+	background-size: cover;
+}
+.atividade article:nth-of-type(2):hover{
+	background: url(../img/atividade02-1.png);
+	background-size: cover;
+	transition: all 0.5s ease-out;
+}
+
+.atividade article:nth-of-type(3){
+	background: url(../img/atividade03.png);
+	background-size: cover;
+}
+.atividade article:nth-of-type(3):hover{
+	background: url(../img/atividade03-1.png);
+	background-size: cover;
+	transition: all 0.5s ease-out;
+}
+
+.atividade article h2{
+	font-size: 2em;
+	color: #FFFFFF;
+	margin-top: 60%;
+}
+.atividade article p{
+	color: #FFFFFF;
+	font-size: 1.5em;
+	width: 80%;
+	margin: 5% auto;
+}
+.atividade article a{
+	border: 2px solid #F4F3F3;
+	padding: 10px 15px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-size: 1.5em;
+}
+
+
+/* FIM chamadaDois */
+
+.video{
+	background: url(../img/fundoVideo.png)no-repeat;
+	text-align:center;
+	padding:2%;
+}
+
+.historia{
+	margin:2% 0;
+}
+
+.rodape{
+	background: url(../img/fundoRodape.png) no-repeat;
+	background-size: cover; /* imagem se adpata ao espaço*/
+	overflow: hidden; /* a imagem se adapta ao conteudo dentro dela */
+}
+
+.rodapeEnd{
+	width: 35%;
+	float: right; /* flutuar*/
+}
+
+.rodapeEnd article:first-child/* somente primeiro filho, primeiro article */ {
+	margin-top: 50%;
+}
+
+.rodapeEnd article h2{
+	color:#FF9600;
+	font-size: 2.2em;
+	margin-bottom: 35px;
+}
+
+.rodapeRede{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10%;
+}
+
+.rodapeRede a{}
+
+
+.rodapeRede img{
+	width: 40%;
+}
+
+.copyright {
+	clear: both;
+	border-top: 10px solid rgba(240,92,15,1.00);
+}
+
+.copyright h2{
+	background: rgba(34,33,33,1.00);
+	text-align: center;
+	font-size: 1.2em;
+	color: rgba(240,92,15,1.00);
+	padding: 20px 15px;
+}
+
+/* ################### PAGINA CONTATO ####################### */
+.contato{
+	display: flex;
+	justify-content: space-between;
+	margin: 2% 0;
+}
+
+.contato article{
+	width: 49%;
+}
+
+.form legend{
+	font-size: 2em;
+	color: #FF9600;
+}
+
+.form input,
+.form textarea{
+	background: rgba(95,93,93,1.00);
+	width: 95%;
+	padding: 1%;
+	margin-bottom: 1%;
+	border: thin solid rgba(255,150,0,1.00);
+	font-size: 1.2em;
+	color: #FFFFFF;
+}
+
+.form textarea{
+	height: 120px;
+	resize: none; /* nao podera modificar tamanho */
+}
+
+.form input[type=submit]{
+	cursor: pointer; /* maozinha no botao */
+	float: right;
+	width: 40%;
+	margin-right: 2.6%;
+	background: #FF9600;
+	color: #000000;
+	border: thin solid #3D3D3D;
+	padding: 2%;
+	font-weight: bold;
+}
+
+.form input[type=submit]:hover{
+	background: rgba(95,93,93,.50);
+	color: #FF9600;
+	border: thin solid #000000;
+}
+
+
+
+
+/* ################### FIIIIM PAGINA CONTATO ####################### */
+
+/* inicia 768 */
+@media (max-width:768px){ /* a partir desta resolução */
+	
+	.banner{
+		display: none;
+	}
+	
+	.topo article{
+		flex-direction: column;
+		align-items: center;
+	} /* deixou em coluna */
+	
+	.topo article h1{
+		width: 100px;
+		height: 50px;	
+	}
+	
+	.menu{
+		display:none;
+	}
+	
+	.menu-mobile{
+		display:block;
+	}
+	
+	.menu ul{
+		flex-direction: column;
+	}
+	
+	.menu ul li{
+		display:block;
+		border-bottom: 1px solid #fff;
+	}
+	
+	.menu ul ul{
+		position: relative;
+		display: none;
+	}
+	
+	.submenu{
+		position: static;
+		margin-top: 1em;
+}
+	
+	.submenu li{
+		padding: 0.3em 0em!important;
+		background:rgba(240,92,15,0.74);
+		border: none!important;
+	}
+	.chamadaUm h2{
+		font-size: 1.8em;
+		border-bottom: 3px solid #796411;
+	}
+	
+	.chamadaUm hr{
+		heigth: 2px;
+		top:-10 px;
+	}
+	
+	.chamadaUm article p{
+		font-size: 1.5em;
+	}
+	
+	.titulo h2:first-child{
+		display:none;
+	}
+	
+	.tituloDesk{
+		display: none;
+	}
+	
+	.titulo{
+		text-align: center;
+		margin: 2% 0;
+	}
+	
+	.tituloMobile{
+		display: block;
+		color:#FF9600;
+		font-size: 2.5em;
+	}
+	
+	.atividade{
+		flex-direction: column;
+	}
+	
+	.atividade article{
+		width: 100%;
+		height: 50em;
+		margin: 2% 0;
+	}
+	
+	.atividade article h2{
+		font-size: 4em;
+		margin-top: 60%;
+	}
+	
+	.atividade article p{
+		font-size: 2em;
+		width: 90%;
+	}
+	
+	.atividade article a{
+		padding: 10px 25px;
+		font-size: 2.5em;
+	}
+	
+	.historia{
+		display: none;
+	}
+	
+	.rodape{
+		margin-top: 4%;
+	}
+
+	.rodapeEnd{
+		width: 100%;
+		float: none;
+		text-align: center;	
+	}
+}
+
+/*fim 768*/
+
+@media (max-width:480px){ /* a partir desta resolução */
+	
+	.body{
+		font-size: 12px;
+	}
+	
+	.topo article{
+		flex-direction: column;
+		align-items: center;
+	} /* deixou em coluna */
+	
+	.topo article h1{
+		width: 100px;
+		height: 50px;	
+		
+	}
+	
+	.banner{
+		display:none;
+	} 
+	
+	.chamadaUm h2{
+		font-size: 2em;
+		border-bottom: 3px solid #794611;
+	}
+
+	.chamadaUm hr{
+		height: 2px;
+		top:-9px;
+	}
+		
+	.chamadaUm section{
+		flex-wrap: wrap;
+	}
+
+	.chamadaUm article p{
+		font-size: 1.8em;
+	}	
+	
+	.titulo h2:first-child{
+		display:none;
+	}
+	
+	.tituloDesk{
+		display: none;
+	}
+	
+	.titulo{
+		text-align: center;
+		margin: 2% 0;
+	}
+
+	.tituloMobile{
+		display:block;
+		color: #FF9600;
+		font-size: 3em;
+	}
+	
+	.atividade{
+		flex-direction:column;
+	}
+	
+	.atividade article{
+		width:100%;
+		height: 50em;
+		margin: 2% 0;
+	}
+	
+	.atividade article h2{
+		font-size: 4em;
+		margin-top: 80%;
+	}
+	.atividade article p{
+		font-size: 2em;
+		width: 90%;
+	}
+	.atividade article a{
+		padding: 10px 25px;
+		font-size: 2.5em;
+	}
+	
+	.historia{
+		display: none;
+	}
+	
+	.rodape{
+		margin-top: 4%;
+	}
+
+	.rodapeEnd{
+		width: 100%;
+		float: none;
+		text-align: center;	
+	}
+	}/* fecha o 480 */

@@ -1,0 +1,9 @@
+window.onscroll = function(){
+	var top = window.pageYOffset || document.documentElement.scrollTop;
+	if(top > 400){
+		document.getElementById("topo-fixo").classList.add("menu-fixo");
+		console.log("CHEGOU em 400");
+	}else{
+		document.getElementById("topo-fixo").classList.remove("menu-fixo");
+	}
+}
